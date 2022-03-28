@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'ebdjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-"""if 'RDS_HOSTNAME' in os.environ:
+if 'RDS_HOSTNAME' in os.environ:
    DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -99,14 +99,14 @@ else:
      }
     }
 	
-"""
-DATABASES = {
+
+"""DATABASES = {
        'default': {
           'ENGINE': 'django.db.backends.sqlite3',
           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
      }
     }
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -146,7 +146,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
-if 'NAME' in os.environ:
-     print(f"Hello this is {os.environ['NAME']}")
-else:
-     print('Hello this is not abdelali')
+
